@@ -14,7 +14,7 @@ function seedData() {
       brand: carData.brand,
       model: carData.model,
       year: carData.year,
-      bodyType: carData.bodyType,
+      bodyStyle: carData.bodyStyle,
       fuelType: carData.fuelType,
       transmission: carData.transmission,
       mileage: carData.mileage,
@@ -26,7 +26,7 @@ function seedData() {
       inMarket: carData.inMarket,
     });
     newCar.save();
-    console.log("cars data", newCar.brand);
+    console.log("cars data", newCar.color);
   }
 }
 
