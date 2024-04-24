@@ -30,4 +30,35 @@ function seedData() {
   }
 }
 
-seedData();
+// seedData();
+
+const carData = {
+  brand: "Ford",
+  model: "Mustang",
+  year: 2019,
+  bodyStyle: "Convertible",
+  fuelType: "Gasoline",
+  transmission: "Automatic",
+  engine: "5.0L V8",
+  mileage: 25000,
+  color: "Red",
+  price: 3500000,
+  condition: "Used",
+  description: "Exciting Ford Mustang convertible with powerful V8 engine.",
+  photos: [
+    "https://example.com/mustang-photo1.jpg",
+    "https://example.com/mustang-photo2.jpg",
+    "https://example.com/mustang-photo3.jpg",
+  ],
+};
+
+async function createNewCar(carData) {
+  try {
+    const newCar = new Car(carData);
+    const saveCar = await newCar.save();
+    console.log("Saved Car:", saveCar);
+  } catch (error) {
+    throw error;
+  }
+}
+createNewCar(carData);
